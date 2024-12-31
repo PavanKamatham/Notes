@@ -19,7 +19,7 @@ DockerFile:
  It contains all the commands a user could call on the command line to assemble an image.
 	ADD  : Add local or remote files and directories.
 	ARG  : Use build-time variables.
-	CMD  : Specify default commands.
+	CMD  : To Specify default commands to run when a Docker container is started from the image.
 	COPY : Copy files and directories.
 	ENTRYPOINT : Specify default executable.
 	ENV  : Set environment variables.
@@ -29,7 +29,7 @@ DockerFile:
 	LABEL : Add metadata to an image.
 	MAINTAINER : Specify the author of an image.
 	ONBUILD : Specify instructions for when the image is used in a build.
-	RUN : Execute build commands.
+	RUN : Execute build commands during the build process of a Docker image.
 	SHELL : Set the default shell of an image.
 	STOPSIGNAL : Specify the system call signal for exiting a container.
 	USER : Set user and group ID.
