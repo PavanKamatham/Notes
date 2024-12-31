@@ -1,0 +1,51 @@
+1. Docker is mainly a software development platform and a kind of virtualization technology that makes it easy for us to develop and deploy app inside of neatly packaged virtual containarized environments.
+2. This means the apps run the same way no matter where they are of what machine they are running on.
+3. Docker containers can deployed to just about any machines without any compatible issues. 
+4. Hence the software stays system agnostic, making software simpler to use, less work to develop and easy to maintain and deploy.
+5. These containters running on your computer or server act like little micro computers with verfy specific jobs ,each with their own operating system and their own isolated CPU processes, Memory and Network resources.
+6. Because of this they can easily add ,remove stopped and started again without effecting each other of the host machine.
+7. Containers usually run one specific task such as Java applciation or database and then networked together and pontentially scaled.
+8. Docker is a form of Virtualization but , unlike a Virtual Machine the resources are shared directly with host. This allows to run many docker containers where you may only run few virtual machines.
+	A Virtual Machine has to quarantine off a set of resources HDD,space,memory and processing power, emualted hardware and boot an entire operating system.
+	VM communicate with host operating system via translator application running on Host operation system called Hypervisor
+	Docker communicates natively with the system kernel, bypassing the middleman on linux machines and in winodws 2016 server and above.It means you can run any verison of linux in a container and it will run natively.
+9. Docker uses less space as it re-uses the files effeciently by using the layered file system.
+	If we multiple docker images using the same base image , docker will only keep a single copy of files needed and shared among with each container.
+	
+
+
+DockerFile: 
+ The docker file is simple text document that instructs how the docker image will be build like a blueprint.
+ It contains all the commands a user could call on the command line to assemble an image.
+	ADD  : Add local or remote files and directories.
+	ARG  : Use build-time variables.
+	CMD  : Specify default commands.
+	COPY : Copy files and directories.
+	ENTRYPOINT : Specify default executable.
+	ENV  : Set environment variables.
+	EXPOSE: Describe which ports your application is listening on.
+    FROM : Create a new build stage from a base image.
+	HEALTHCHECK : Check a container's health on startup.
+	LABEL : Add metadata to an image.
+	MAINTAINER : Specify the author of an image.
+	ONBUILD : Specify instructions for when the image is used in a build.
+	RUN : Execute build commands.
+	SHELL : Set the default shell of an image.
+	STOPSIGNAL : Specify the system call signal for exiting a container.
+	USER : Set user and group ID.
+	VOLUME :  Create volume mounts.
+	WORKDIR :  Change working directory.
+ 
+	A Docker file must begin with a FROM instruction after parser directives, comments and globally scoped ARGS
+ 
+ Docker Commands: 
+	To create image: 
+		docker build -t <<imagename>> . ( . <<THe location of Dockerfile>>)
+	To view the images: 
+		docker images
+	To pull an image:
+		docker pull <<imagename>> or <<imagename>>:<<tagname>>
+	To run an image:
+		docker run <<imagename>> . Note we can have multiple options the way to start a docker contianer.
+		
+  
