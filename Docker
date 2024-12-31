@@ -24,7 +24,7 @@ DockerFile:
 	ENTRYPOINT : Specify default executable.
 	ENV  : Set environment variables.
 	EXPOSE: Describe which ports your application is listening on.
-    FROM : Create a new build stage from a base image.
+        FROM : Create a new build stage from a base image.
 	HEALTHCHECK : Check a container's health on startup.
 	LABEL : Add metadata to an image.
 	MAINTAINER : Specify the author of an image.
